@@ -1,0 +1,450 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    padding: 5px;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #e02238;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-between;
+}
+
+nav ul li {
+    list-style: none;
+    padding: 10px;
+}
+
+nav ul li a,
+.users {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 20px;
+}
+
+.menu-btn {
+    cursor: pointer;
+    padding: 10px;
+    margin-right: 20px;
+}
+
+.btn-line {
+    width: 30px;
+    height: 3px;
+    background-color: #ffffff;
+    margin: 3px 0;
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    background-image: linear-gradient(45deg, rgb(72, 81, 208), rgb(11, 7, 133));
+    top: 0;
+    right: 1500px;
+    width: 225px;
+    height: 47.5%;
+    transition: 0.4s;
+    text-align: center;
+    border-radius: 0 0 100px 100px;
+    position: absolute;
+    border: 1px solid white;
+}
+
+.menu.active {
+    right: 0;
+}
+
+.menu-items {
+    list-style: none;
+    padding: 20px;
+}
+
+.menu-items li {
+    margin-bottom: 15px;
+}
+
+.menu-items a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+}
+
+.menu-items a:hover {
+    border: 1px solid yellow;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+#close-menu img {
+    width: 50px;
+    height: 50px;
+    border: none;
+    background-size: cover;
+    cursor: pointer;
+}
+
+#close-menu:hover {
+    border: none;
+}
+
+.container_principal {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 1;
+}
+
+.logo_nav {
+    display: flex;
+    align-items: center;
+}
+
+h1 {
+    font-size: 45px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.logo_nav button {
+    background-color: transparent;
+    width: 100px;
+    height: 100px;
+    border: none;
+    cursor: pointer;
+    margin: 10px;
+    background-image: url(img/icon.png);
+    background-size: cover;
+}
+
+nav ul li a:hover {
+    padding: 5px;
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 10px;
+}
+
+.container1 form {
+    margin-top: 10%;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    padding: 10px;
+    max-width: 50vw;
+    align-items: center;
+}
+
+.formulario {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    text-align: left;
+    font-size: 15px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.btngg {
+    display: flex;
+    background-color: rgb(255, 255, 255);
+    align-items: center;
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+    cursor: pointer;
+    gap: 10px;
+    border: 1px solid #ccc;
+}
+
+.btngoogle img {
+    width: 30px;
+    height: 30px;
+}
+
+input {
+    width: 40vw;
+    height: 5vh;
+    margin-bottom: 10px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 1px solid;
+    border-radius: 10px;
+    padding: 20px;
+    background-color: transparent;
+}
+
+.ir_para_login {
+    list-style: none;
+    text-decoration: none;
+    font-size: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.ir_para_login:hover {
+    color: black;
+}
+
+.btn_create {
+    width: 20%;
+    background-color: rgb(37, 37, 250);
+    color: white;
+    border-radius: 10px;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+.btn_create:hover {
+    background-color: rgb(66, 66, 255);
+}
+
+.redes_sociais li {
+    display: flex;
+
+}
+
+.redes_sociais li a {
+    text-decoration: none;
+    color: black;
+    justify-content: space-around;
+    padding-left: 10px;
+    margin-bottom: 10%;
+}
+
+.redes_sociais li a:hover {
+    color: red;
+}
+
+.container2 {
+    background-image: url(img/back.jpeg);
+    background-size: cover;
+    max-width: 50vw;
+    display: flex;
+    align-items: center;
+}
+
+.container2 img {
+    width: 30px;
+    height: 30px;
+}
+
+
+.container2 .img_container2 {
+    width: 50%;
+    height: 60%;
+    border-radius: 10px;
+}
+
+.vagas_emprego {
+    background-color: rgb(203, 203, 203);
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-radius: 10px;
+    width: 90vw;
+    height: auto;
+}
+
+.vagas_emprego img {
+    width: 30%;
+    height: 30%;
+}
+
+.vagas_emprego p {
+    font-size: 2rem;
+    text-align: center;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+footer {
+    background-color: #e02238;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+}
+
+footer .footerclick {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+
+footer p {
+    color: white;
+}
+
+footer .footerclick img {
+    background-color: transparent;
+    width: 100px;
+    height: 100px;
+}
+
+footer .footerclick .whats {
+    background-image: url(img/whatsapp.png);
+    background-size: cover;
+    background-color: transparent;
+    cursor: pointer;
+    padding: 5px;
+    border: none;
+    width: 30px;
+    height: 30px;
+    margin: 30px;
+}
+
+footer .footerclick .insta {
+    background-image: url(img/instagram.png);
+    background-size: cover;
+    background-color: transparent;
+    cursor: pointer;
+    padding: 5px;
+    border: none;
+    width: 30px;
+    height: 30px;
+    margin: 30px;
+}
+
+
+/* 481px a 767px de largura */
+/* largura de 481 a 767 px */
+/* largura de 768 a 1023 px */
+/* 1024px a 1365px de largura */
+/* 1366px a 1680px de largura */
+
+/* largura até 767 px */
+@media screen and (min-width:320px) and (max-width: 767px) {
+    nav {
+        display: flex;
+    }
+
+    nav .logo_nav button {
+        width: 50px;
+        height: 50px;
+    }
+
+    nav ul {
+        display: none;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    nav .users {
+        font-size: 20px;
+    }
+
+    h1 {
+        text-align: center;
+        font-size: 35px;
+    }
+
+    .container_principal {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .container1 form {
+        width: 100vw;
+        max-width: 100vw;
+    }
+
+    input {
+        width: 90vw;
+    }
+
+    .logo_nav button {
+        width: 112px;
+        height: 40px;
+    }
+
+    .btn_create {
+        width: 50%;
+    }
+
+    .container2 {
+        background-image: none;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+    }
+
+    .container2 .img_container2 {
+        width: 90vw;
+        height: auto;
+    }
+
+    .vagas_emprego {
+        max-width: 100vw;
+        width: 100vw;
+    }
+
+    footer {
+        flex-direction: column;
+        display: flex;
+        align-items: center;
+    }
+
+    footer .footerclick {
+        justify-content: center;
+    }
+
+    footer p {
+        font-size: 13px;
+        padding: 5px;
+    }
+}
+
+@media screen and (min-width:768px) and (max-width:1023px) {
+    nav .logo_nav button {
+        width: 50px;
+        height: 50px;
+    }
+    .menu-btn{
+        display: none;
+    }
+    h1{
+        text-align: center;
+    }
+    .container2{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .vagas_emprego {
+        max-width: 90vw;
+        width: 40vw;
+    }
+    .vagas_emprego p{
+        font-size: 1.5rem;
+    }
+    .container_principal .container1 form{
+        align-items: center;
+    }
+    .container1 button{
+        width:50%;
+        align-self: center;
+    }
+    .btngoogle .btngg{
+        width: 30vw;
+        align-self: center;
+    }
+}
+@media screen and (min-width:1024px) {
+    .menu-btn{
+        display: none;
+    }
+}

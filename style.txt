@@ -1,0 +1,6 @@
+/* largura de 320 a 480 px */
+/481px a 767px de largura/
+/* largura de 481 a 767 px */
+/* largura de 768 a 1023 px */
+/* 1024px a 1365px de largura */
+/* 1366px a 1680px de largura */

@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="cpanel.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <nav class="nav" id="nav">
+        <div class="nav_itens">
+            <button type="button" onclick="window.location.href='cpanel.html'"></button>
+            <p>Painel de Controle <span
+                    style="border:2px solid black; border-radius: 10px; border-right: none; color:blue; font-weight: bold;">Div</span><span
+                    style="border:2px solid black; border-radius: 10px; border-left: none; color: blue; font-weight: 100;">Work</span>
+            </p>
+        </div>
+        <div class="nav_itens1">
+            <img src="img/perfil.png" alt="imagem de perfil">
+            <p>Olá, <span style="color: blue">empresa</span></p>
+        </div>
+        <div class="nav_itens3">
+            <img src="img/notificacao.png" alt="notificacao" style="cursor:pointer;"><span
+                style="margin-bottom: 4vh; color:red; font-weight: 700;">15</span>
+            <img src="img/escuro.png" id="toogle-btn" style="cursor:pointer;">
+
+        </div>
+        <div class="menu-btn">
+            <div class="btn-line"></div>
+            <div class="btn-line"></div>
+            <div class="btn-line"></div>
+        </div>
+    </nav>
+    <div class="menu">
+        <ul class="menu-items">
+            <div class="nav_itens">
+                <img src="img/perfil.png" alt="imagem de perfil">
+                <p>Olá, <span style="color: blue">empresa</span></p>
+            </div>
+            <li><a href="#">Sobre nós</a></li>
+            <li><a href="#">Vagas de emprego</a></li>
+            <li><a href="#">Empresas parceiras</a></li>
+            <li><a href="#">Categorias</a></li>
+            <div class="nav_itens3">
+                <img src="img/notificacao.png" alt="notificacao" style="cursor:pointer;"><span
+                    style="margin-bottom: 4vh; color:red; font-weight: 700;">15</span>
+                    <img src="img/escuro.png" id="toogle-btn-menu" style="cursor:pointer;">
+            </div>
+            <li><a id="close-menu"><img src="img/botao-fechar.png" alt=""></a>
+            </li>
+        </ul>
+    </div>
+    <div class="container_principal" id="container_principal">
+        <div class="container1" id="container1">
+            <h4>Ações</h4>
+
+            <div id="exibir_perfil" onclick="abrir_perfil()" class="container1_options"><img src="img/olho.png"
+                    alt=""><span>Perfil</span>
+            </div>
+            <div class="container1_options" onclick="abrirvagas()"><img src="img/mais.png" alt=""><span>Adicionar
+                    vaga</span></div>
+            <div class="container1_options" onclick="abrir_minhasvagas()"><img src="img/lista-de-controle.png"
+                    alt=""><span>Minhas vagas</span>
+            </div>
+            <div class="container1_options" onclick="abrir_feed()"><img src="img/comente.png"
+                    alt=""><span>Feedback</span></div>
+            <div class="container1_options"><img src="img/sair.png" alt=""><span>Sair</span></div>
+
+        </div>
+        <div class="container2">
+            <h4>Meus eventos</h4>
+            <div class="eventos">
+                <p>Eventoo <img src="img/olho.png" alt=""></p>
+                <p>Eventooooooooooooooooooooooooooooooooo1 <img src="img/olho.png" alt=""></p>
+                <p>Eventooooooooooooooooooooooooooooooooo1 <img src="img/olho.png" alt=""></p>
+                <p>Eventooooooooooooooooooooooooooooooooo1 <img src="img/olho.png" alt=""></p>
+                <p>Eventooooooooooooooooooooooooooooooooo1 <img src="img/olho.png" alt=""></p>
+                <p>Eventooooooooooooooooooooooooooooooooo1 <img src="img/olho.png" alt=""></p>
+                <p>Eventooooooooooooooooooooooooooooooooo1 <img src="img/olho.png" alt=""></p>
+                <p>Eventooooooooooooooooooooooooooooooooo1 <img src="img/olho.png" alt=""></p>
+                <p>Eventooooooooooooooooooooooooooooooooo1 <img src="img/olho.png" alt=""></p>
+                <p>Eventooooooooooooooooooooooooooooooooo1 <img src="img/olho.png" alt=""></p>
+                <p>Eventooooooooooooooooooooooooooooooooo1 <img src="img/olho.png" alt=""></p>
+                <p>Eventooooooooooooooooooooooooooooooooo1 <img src="img/olho.png" alt=""></p>
+            </div>
+        </div>
+        <div class="container3">
+            <div class="header_container3">
+                <h4>FAQ</h4>
+            </div>
+            <p>Perguntaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa1</p>
+
+        </div>
+    </div>
+
+    <div class="perfil_empresa" style="display: none;">
+        <div class="painel">
+            <div class="header_principal">
+                <h2>Seu Perfil</h2>
+                <div class="header_perfil">
+
+                    <button type="button" class="bot_1" id="ativar_edicao">Ativar Edição</button>
+                    <button type="button" class="bot_2" id="salvar_alt">Salvar alterações</button>
+                    <button type="button" class="bot_3" id="fechar_perfil" onclick="fechar_perfil()"></button>
+                </div>
+            </div>
+
+            <div class="items">
+                <div class="detalhes" id="detalhes">
+                    <h3>Detalhes</h3>
+                    <label for="nome">Nome</label>
+                    <input type="text" value="Lucas">
+                    <label for="cpf_cpnj">CPF/CNPJ</label>
+                    <input type="text" value="12345">
+                    <label for="endereco">Endereço</label>
+                    <input type="text" value="rua caminho 1">
+                </div>
+
+                <div class="sobre">
+                    <h3>Sobre mim</h3>
+                    <textarea name="sobre" id="sobre" cols="10" rows="10">eu lucas</textarea>
+                </div>
+                <div class="redes_sociais">
+                    <div class="mudar_imagem">
+                        <img src="img/icon.png" alt="">
+                        <input type="file" name="foto_empresa">
+                    </div>
+                    <div class="redes">
+                        <div class="redes_icons"><img src="img/instagram.png" alt=""><input type="text" value="link1">
+                        </div>
+                        <div class="redes_icons"><img src="img/whatsapp.png" alt=""><input type="text" value="link2">
+                        </div>
+                        <div class="redes_icons"><img src="img/cv.png" alt=""><input type="text" value="link3"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="add_vaga">
+        <form action="cpanel.html" method="POST" class="form_add_vaga">
+            <div class="header_principal">
+                <h2>Adicionar vaga de emprego</h2>
+                <button type="button" class="bot_3" id="fechar_perfil" onclick="fecharvagas()"></button>
+            </div>
+            <div class="container">
+                <div class="space1">
+                    <label for="name">Nome da vaga</label>
+                    <input type="text" class="text" placeholder="Ex: técnico de laboratório">
+
+                    <label for="local">Localização</label>
+                    <input type="text" placeholder="Ex: Eunápolis, BA">
+
+                    <label for="salario">Salário</label>
+                    <div style="width: auto; justify-content: flex-start;"><input type="checkbox" name="combinar"
+                            id=""><label for="">A combinar</label></div>
+                    <label for="">--Ou--</label>
+                    <input type="text" placeholder="1390,50 (somente números)">
+
+                    <label for="tipo_vaga">Tipo de vaga</label>
+                    <select class="form-control" name="tipo_vaga" id="salario">
+                        <option value="Presencial">Presencial</option>
+                        <option value="Home office">Home Office</option>
+                        <option value="Híbrido">Híbrido</option>
+                    </select>
+                </div>
+                <div class="space2">
+
+                    <label for="contrato">Tipo de contrato</label>
+                    <select class="form-control" name="tipo_contrato" id="salario">
+                        <option value="CLT">CLT</option>
+                        <option value="Autonomo">Autonomo</option>
+                        <option value="PJ">PJ</option>
+                        <option value="MEI">MEI</option>
+                        <option value="Temporário">Temporário</option>
+                    </select>
+
+                    <label for="desc_vaga">Descrição da vaga</label>
+                    <textarea name="desc_vaga_text" id="desc_vaga" cols="30" rows="10"></textarea>
+
+                    <button type="submit">Salvar informações</button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <div class="vagas">
+        <div class="vagas_container">
+            <div class="vagas_header">
+                <h2>Minhas vagas</h2>
+                <button type="button" onclick="fechar_minhasvagas()"></button>
+            </div>
+            <div class="vagas_content">
+                <div class="filtros">
+                    <label style="font-size: 30px;">Fitrar</label>
+                    <div class="vagas_data">
+                        <label for="">Por tempo</label>
+                        <select class="form-control" name="data">
+                            <option value=""></option>
+                            <option value="recente">Mais recente</option>
+                            <option value="antigo">Mais antigo</option>
+                        </select>
+                    </div>
+                    <div class="alfabetica">
+                        <label for="">Ordem alfabetica</label>
+                        <select class="form-control" name="alfabetica">
+                            <option value=""></option>
+                            <option value="A">A</option>
+                            <option value="B">B</option>
+                            <option value="C">C</option>
+                            <option value="D">D</option>
+                            <option value="E">E</option>
+                            <option value="F">F</option>
+                            <option value="G">G</option>
+                            <option value="H">H</option>
+                            <option value="I">I</option>
+                            <option value="J">J</option>
+                            <option value="K">K</option>
+                            <option value="L">L</option>
+                            <option value="M">M</option>
+                            <option value="N">N</option>
+                            <option value="O">O</option>
+                            <option value="P">P</option>
+                            <option value="Q">Q</option>
+                            <option value="R">R</option>
+                            <option value="S">S</option>
+                            <option value="T">T</option>
+                            <option value="U">U</option>
+                            <option value="V">V</option>
+                            <option value="W">W</option>
+                            <option value="X">X</option>
+                            <option value="Y">Y</option>
+                            <option value="Z">Z</option>
+                        </select>
+                    </div>
+                    <div class="n_candidatos">
+                        <label for="">Por Nº de cadidatos</label>
+                        <select class="form-control" name="alfabetica">
+                            <option value=""></option>
+                            <option value="crescente">Crescente</option>
+                            <option value="decrescente">Decrescente</option>
+                        </select>
+                    </div>
+                    <button type="submit">Buscar</button>
+
+                </div>
+                <div class="vagas_box">
+                    <div class="lista_vaga">nome da vaga</div>
+                    <div class="lista_vaga">nome da vaga</div>
+                    <div class="lista_vaga">nome da vaga</div>
+                    <div class="lista_vaga">nome da vaga</div>
+                    <div class="lista_vaga">nome da vaga</div>
+                    <div class="lista_vaga">nome da vaga</div>
+                    <div class="lista_vaga">nome da vaga</div>
+                    <div class="lista_vaga">nome da vaga</div>
+                    <div class="lista_vaga">nome da vaga</div>
+                    <div class="lista_vaga">nome da vaga</div>
+                    <div class="lista_vaga">nome da vaga</div>
+                    <div class="lista_vaga">nome da vaga</div>
+                    <div class="lista_vaga">nome da vaga</div>
+                    <div class="lista_vaga">nome da vaga</div>
+                    <div class="lista_vaga">nome da vaga</div>
+                    <div class="lista_vaga">nome da vaga</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="feedback">
+        <form action="" class="form_feedback">
+            <div class="feed_header">
+                <h2>Feedback</h2>
+                <button type="button" onclick="fechar_feed()"></button>
+            </div>
+            <label class="feed_txt" for="">Como tem sido sua experiencia em nossa plataforma? Encontrou algum problema
+                ou tem sugestôes?
+                Mande para nós, será uma alegria receber seu comentário.</label>
+            <textarea class="textarea" name="feedback" id="" cols="30" rows="10" placeholder="Digite aqui..."></textarea>
+
+            <div class="feed_submit">
+                <label for="">Email</label>
+                <input type="text">
+                <button type="submit">Enviar</button>
+            </div>
+        </form>
+    </div>
+    <script>
+        const menuBtn = document.querySelector(".menu-btn");
+        const menu = document.querySelector(".menu");
+
+        menuBtn.addEventListener("click", () => {
+            menu.classList.toggle("active");
+        });
+
+        const closeMenuLink = document.getElementById("close-menu");
+        closeMenuLink.addEventListener("click", () => {
+            menu.classList.remove("active");
+        });
+        function fechar_perfil() {
+            var div = document.querySelector(".perfil_empresa");
+            div.style.display = "none";
+        }
+
+        function abrir_perfil() {
+            var div = document.querySelector(".perfil_empresa");
+            div.style.display = "block";
+        }
+
+        function abrirvagas() {
+            var div = document.querySelector(".add_vaga");
+            div.style.display = "block";
+        }
+        function fecharvagas() {
+            var div = document.querySelector(".add_vaga");
+            div.style.display = "none";
+        }
+        function abrir_minhasvagas() {
+            var div = document.querySelector(".vagas");
+            div.style.display = "block";
+        }
+        function fechar_minhasvagas() {
+            var div = document.querySelector(".vagas");
+            div.style.display = "none";
+        }
+        function abrir_feed() {
+            var div = document.querySelector(".feedback");
+            div.style.display = "block";
+        }
+        function fechar_feed() {
+            var div = document.querySelector(".feedback");
+            div.style.display = "none";
+        }
+
+
+        const toggleBtn = document.getElementById("toogle-btn");
+        const btnCorMenu = document.getElementById("toogle-btn-menu"); // Botão para alternar tema
+        const body = document.body;
+        const nav = document.getElementById("nav");
+        const act = document.getElementById("container1");
+        const eventos = document.querySelector(".eventos");
+        const container2 = document.querySelector(".container2");
+        const container3 = document.querySelector(".container3");
+        const perfil = document.querySelector(".painel");
+        const detalhes = document.querySelector(".detalhes");
+        const sobre = document.querySelector(".sobre");
+        const redes = document.querySelector(".redes_sociais");
+        const form_add_vaga = document.querySelector(".form_add_vaga");
+        const nova_vaga = document.querySelector(".vagas_container");
+        const header_vagas = document.querySelector(".vagas_header");
+        const feedback = document.querySelector(".form_feedback");
+        let darkMode = localStorage.getItem("dark-mode");
+        const textarea = document.querySelector(".textarea");
+
+        const enableDarkMode = () => {
+            body.classList.toggle("dark-mode-theme", true);
+            nav.classList.toggle("nav_dark", true);
+            act.classList.toggle("containers_dark", true);
+            eventos.classList.toggle("containers_dark", true);
+            container2.classList.toggle("containers_dark", true);
+            container3.classList.toggle("containers_dark", true);
+            perfil.classList.toggle("containers_dark", true);
+            detalhes.style.backgroundColor="#5b5b5b";
+            sobre.style.backgroundColor="#5b5b5b";
+            sobre.style.color="white";
+            redes.style.backgroundColor="#5b5b5b";
+            form_add_vaga.style.backgroundColor="#5b5b5b";
+            form_add_vaga.style.color="white";
+            nova_vaga.style.backgroundColor="#5b5b5b";
+            nova_vaga.style.color="white";
+            header_vagas.style.backgroundColor="#5b5b5b";
+            header_vagas.style.color="white";
+            feedback.style.backgroundColor="#5b5b5b";
+            feedback.style.color="white";
+            textarea.style.backgroundColor="#8f8f8f";
+            textarea.style.color="white";
+            localStorage.setItem("dark-mode", "enabled");
+        };
+
+        const disableDarkMode = () => {
+            body.classList.toggle("dark-mode-theme", false);
+            nav.classList.toggle("nav_dark", false);
+            act.classList.toggle("containers_dark", false);
+            eventos.classList.toggle("containers_dark", false);
+            container2.classList.toggle("containers_dark", false);
+            container3.classList.toggle("containers_dark", false);
+            perfil.classList.toggle("containers_dark", false);
+            detalhes.classList.toggle("perfil_dark", false);
+            sobre.classList.toggle("perfil_dark", false);
+            redes.classList.toggle("perfil_dark", false);
+            detalhes.style.backgroundColor="#e4e4e4";
+            sobre.style.backgroundColor="#e4e4e4";
+            sobre.style.color="black";
+            redes.style.backgroundColor="#e4e4e4";
+            form_add_vaga.style.backgroundColor="#e4e4e4";
+            form_add_vaga.style.color="black";
+            nova_vaga.style.backgroundColor="#e4e4e4";
+            nova_vaga.style.color="black";
+            header_vagas.style.backgroundColor="#e4e4e4";
+            header_vagas.style.color="black";
+            feedback.style.backgroundColor="#e4e4e4";
+            feedback.style.color="black";
+            textarea.style.backgroundColor="white";
+            textarea.style.color="black";
+            localStorage.setItem("dark-mode", "disabled");
+        };
+
+        if (darkMode === "enabled") {
+            enableDarkMode();
+        }
+
+        toggleBtn.addEventListener("click", (e) => {
+            darkMode = localStorage.getItem("dark-mode");
+            if (darkMode === "disabled") {
+                enableDarkMode();
+            } else {
+                disableDarkMode();
+            }
+        });
+
+        btnCorMenu.addEventListener("click", (e) => {
+            darkMode = localStorage.getItem("dark-mode");
+            if (darkMode === "disabled") {
+                enableDarkMode();
+            } else {
+                disableDarkMode();
+            }
+        });
+
+
+
+    </script>
+</body>
+
+</html>
